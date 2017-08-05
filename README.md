@@ -8,7 +8,7 @@ Experimental Node server without external dependencies.
 const Server = require('./lib/Server')
 
 const server = new Server({
-  port: 80,
+  port: process.env.PORT || 9000,
   router: {
     statusCode: 200, // default response status code
     contentType: 'text/plain' // default response content type
