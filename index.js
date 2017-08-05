@@ -1,7 +1,7 @@
 const Server = require('./lib/Server')
 
 const server = new Server({
-  port: 9000
+  port: process.env.PORT
 })
 
 server.middle((req, res, next) => {
