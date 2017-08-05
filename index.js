@@ -4,6 +4,11 @@ const server = new Server({
   port: 9000
 })
 
+server.middle((req, res, next) => {
+  console.log('New request')
+  next()
+})
+
 server.get('/', (req, res) => {
   res.send({
     hello: 'world'
@@ -11,7 +16,6 @@ server.get('/', (req, res) => {
 })
 
 server.post('/', (req, res) => {
-  console.log(req.body)
   res.send({
     hello: 'world'
   })
