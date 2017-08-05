@@ -8,30 +8,25 @@ Experimental Node server without external dependencies.
 const Server = require('./lib/Server')
 
 const server = new Server({
-  port: process.env.PORT || 9000,
-  router: {
-    statusCode: 200, // default response status code
-    contentType: 'text/plain' // default response content type
+  port: process.env.PORT || 9000
+}, (err) => {
+  if (err) {
+    console.log(err)
+    return
   }
+  console.log('Server is running')
 })
 
-// Add a middleware.
-server.middle((req, res, next) => {
+server.middleware((req, res, next) => {
   next()
 })
 
-// Add get route.
 server.get('/', (req, res) => {
-  res.send({
-    hello: 'world'
-  })
+  res.send({ hello: 'world' })
 })
 
-// Add post route.
 server.post('/', (req, res) => {
-  res.send({
-    hello: 'world'
-  })
+  res.send({ hello: 'world' })
 })
 ```
 
