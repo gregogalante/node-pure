@@ -15,17 +15,20 @@ const server = new Server({
   }
 })
 
+// Add a middleware.
 server.middle((req, res, next) => {
   console.log('New request')
   next()
 })
 
+// Add get route.
 server.get('/', (req, res) => {
   res.send({
     hello: 'world'
   })
 })
 
+// Add post route.
 server.post('/', (req, res) => {
   res.send({
     hello: 'world'

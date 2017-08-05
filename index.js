@@ -5,7 +5,6 @@ const server = new Server({
 })
 
 server.middle((req, res, next) => {
-  console.log('New request')
   next()
 })
 
