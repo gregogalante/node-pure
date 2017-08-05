@@ -11,12 +11,8 @@ server.get('/', (req, res) => {
 })
 
 server.post('/', (req, res) => {
-  req.on('data', (data) => {
-    console.log(data)
-  })
-  req.on('end', () => {
-    res.send({
-      hello: 'world'
-    })
+  console.log(req.body)
+  res.send({
+    hello: 'world'
   })
 })
