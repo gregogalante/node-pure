@@ -17,7 +17,6 @@ const server = new Server({
 
 // Add a middleware.
 server.middle((req, res, next) => {
-  console.log('New request')
   next()
 })
 
