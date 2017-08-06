@@ -19,6 +19,5 @@ server.get('/', (req, res) => {
 })
 
 server.post('/', (req, res) => {
-  console.log(req.body)
   res.send({ hello: 'world' })
 })
