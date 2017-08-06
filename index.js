@@ -143,14 +143,11 @@ Server.prototype.__manageRequest = function (req, res) {
     req.body += data
 
     // close connection if data is too big
-    if (req.body.length > 1e6) {
+    if (req.body.length > 1e6) { // TODO: Make it dynamic
       req.connection.destroy()
     }
   })
   req.on('end', () => {
-    // transform body buffer to an object
-    req.body = querystring.parse(req.body)
-
     // call middleware
     this._manageMiddlewares(req, res, callback)
   })
