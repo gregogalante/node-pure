@@ -4,7 +4,8 @@
   "description": "Experimental Node server without external dependencies.",
   "main": "index.js",
   "scripts": {
-    "test": "node ./example.js"
+    "test": "jest",
+    "example": "node ./example.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/gregogalante/node-pure-server/issues"
   },
-  "homepage": "https://github.com/gregogalante/node-pure-server#readme"
+  "homepage": "https://github.com/gregogalante/node-pure-server#readme",
+  "devDependencies": {
+    "jest": "^20.0.4"
+  }
 }

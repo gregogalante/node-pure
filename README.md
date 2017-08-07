@@ -5,7 +5,7 @@ Experimental Node server without external dependencies.
 ## Usage
 
 ```javascript
-const { Server } = require('node-pure-server')
+const Server = require('node-pure-server').Server
 
 const server = new Server({
   port: process.env.PORT || 9000
