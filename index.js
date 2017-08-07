@@ -1,4 +1,3 @@
 module.exports = {
-  Server: require('./lib/Server'),
-  Action: require('./lib/Action')
+  Server: require('./lib/Server')
 }
