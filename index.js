@@ -1,3 +1,4 @@
 module.exports = {
-  Server: require('./lib/Server')
+  Server: require('./lib/Server'),
+  Cli: require('./lib/Cli')
 }
