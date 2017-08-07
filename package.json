@@ -7,6 +7,9 @@
     "test": "jest",
     "example": "node ./example.js"
   },
+  "bin": {
+    "pure:initializer": "./bin/initializer.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gregogalante/node-pure-server.git"
