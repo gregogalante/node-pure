@@ -1,10 +1,11 @@
 {
-  "name": "node-pure-server",
+  "name": "pure",
   "version": "1.0.0",
   "description": "Experimental Node server without external dependencies.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "example": "nodemon ./example.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/gregogalante/node-pure-server#readme",
   "devDependencies": {
-    "jest": "^20.0.4"
+    "jest": "^20.0.4",
+    "nodemon": "^1.11.0"
   }
 }
