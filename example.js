@@ -1,4 +1,4 @@
-const Server = require('./index')
+const { Server } = require('./index')
 
 const server = new Server({
   port: process.env.PORT || 9000
