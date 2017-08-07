@@ -1,5 +1,6 @@
 const Server = require('./index').Server
 const BodyParser = require('./index').BodyParser
+const formidable = require('formidable')
 
 // Initialize server.
 const server = new Server({
@@ -13,7 +14,21 @@ const server = new Server({
 })
 
 // Initialize body parser.
-const bodyParser = new BodyParser()
+const bodyParser = new BodyParser({
+  customParser: (req, res, next) => {
+    const form = new formidable.IncomingForm()
+
+    form.parse(req, (err, fields, files) => {
+      if (err) {
+        res.sendStatus(422)
+        return
+      }
+
+      req.body = fields
+      next()
+    })
+  }
+})
 
 // Middlewares:
 
@@ -26,6 +41,5 @@ server.get('/', (req, res) => {
 })
 
 server.post('/', (req, res) => {
-  console.log(req.body)
   res.send({ hello: 'world' })
 })

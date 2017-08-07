@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/gregogalante/node-pure-server#readme",
   "devDependencies": {
+    "formidable": "^1.1.1",
     "jest": "^20.0.4",
     "nodemon": "^1.11.0"
   }
