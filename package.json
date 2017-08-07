@@ -4,11 +4,7 @@
   "description": "Experimental Node server without external dependencies.",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "example": "node ./example/index.js"
-  },
-  "bin": {
-    "pure:initializer": "./bin/initializer.js"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
