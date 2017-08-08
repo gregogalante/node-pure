@@ -32,6 +32,6 @@ server.post('/', (req, res) => {
 
 ## Documentation
 
-[https://gregogalante.github.io/node-pure/]https://gregogalante.github.io/node-pure/
+https://gregogalante.github.io/node-pure/
 
 **Note: this is an experimental application and should not be used for production products.**
