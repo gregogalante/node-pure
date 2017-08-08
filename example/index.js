@@ -28,9 +28,10 @@ const bodyParser = new BodyParser({
 
 // Initialize myDebugger.
 const myDebugger = new Debugger({
-  envProd: false,
-  logOut: `${path.dirname(require.main.filename)}/log/log_out.log`,
-  logErr: `${path.dirname(require.main.filename)}/log/log_out.log`
+  consoleLog: true,
+  writeLog: true,
+  logOutPath: `${path.dirname(require.main.filename)}/log/log_out.log`,
+  logErrPath: `${path.dirname(require.main.filename)}/log/log_out.log`
 })
 
 // Middlewares:
