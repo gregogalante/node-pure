@@ -1,6 +1,6 @@
 {
   "name": "pure",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Experimental Node server without external dependencies.",
   "main": "index.js",
   "scripts": {
