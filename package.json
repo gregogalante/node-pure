@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "doc": "jsdoc -c ./conf.json",
     "example": "nodemon ./example/index.js"
   },
   "repository": {
@@ -19,6 +20,7 @@
   "homepage": "https://github.com/gregogalante/node-pure#readme",
   "devDependencies": {
     "jest": "^20.0.4",
+    "jsdoc": "^3.5.4",
     "nodemon": "^1.11.0"
   }
 }
