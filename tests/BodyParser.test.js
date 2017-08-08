@@ -1,3 +1,5 @@
+'use strict'
+
 const BodyParser = require('../index').BodyParser
 
 const bodyParser = new BodyParser()
