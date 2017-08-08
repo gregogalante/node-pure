@@ -1,3 +1,5 @@
+'use strict'
+
 const Server = require('../index').Server
 
 const server = new Server({

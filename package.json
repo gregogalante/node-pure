@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "example": "nodemon ./example.js"
+    "example": "nodemon ./example/index.js"
   },
   "repository": {
     "type": "git",

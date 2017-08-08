@@ -1,2 +1,8 @@
+# Node ignore
+
 node_modules
 npm-debug.log
+
+# Custom ignore
+
+example/log/*.log
