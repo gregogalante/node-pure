@@ -16,6 +16,26 @@ test('Add GET path', () => {
   expect(server.routes.GET['/']).toBe(callback)
 })
 
+test('Add DELETE path', () => {
+  // define callback
+  const callback = () => {}
+  // add path
+  server.delete('/', callback)
+  // check path
+  expect(typeof server.routes.DELETE['/']).toBe(typeof callback)
+  expect(server.routes.DELETE['/']).toBe(callback)
+})
+
+test('Add HEAD path', () => {
+  // define callback
+  const callback = () => {}
+  // add path
+  server.head('/', callback)
+  // check path
+  expect(typeof server.routes.HEAD['/']).toBe(typeof callback)
+  expect(server.routes.HEAD['/']).toBe(callback)
+})
+
 test('Add POST path', () => {
   // define callback
   const callback = () => {}
@@ -36,14 +56,14 @@ test('Add PUT path', () => {
   expect(server.routes.PUT['/']).toBe(callback)
 })
 
-test('Add DELETE path', () => {
+test('Add PATCH path', () => {
   // define callback
   const callback = () => {}
   // add path
-  server.delete('/', callback)
+  server.patch('/', callback)
   // check path
-  expect(typeof server.routes.DELETE['/']).toBe(typeof callback)
-  expect(server.routes.DELETE['/']).toBe(callback)
+  expect(typeof server.routes.PATCH['/']).toBe(typeof callback)
+  expect(server.routes.PATCH['/']).toBe(callback)
 })
 
 test('Add a middleware', () => {
