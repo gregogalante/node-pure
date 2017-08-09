@@ -1,4 +1,7 @@
 module.exports = {
   Server: require('./lib/Server'),
-  Logger: require('./lib/Logger')
+
+  modules: {
+    Logger: require('./lib/modules/Logger')
+  }
 }

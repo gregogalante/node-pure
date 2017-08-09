@@ -50,7 +50,7 @@ test('Add a middleware', () => {
   // define middleware
   const middleware = () => {}
   // add path
-  server.middleware(middleware)
+  server.use(middleware)
   // check middlewares
   expect(server.middlewares.length).toBe(1)
   expect(typeof server.middlewares[0]).toBe(typeof middleware)

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: modules/Logger.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,40 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: modules/Logger.js</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @module Logger
+ */
 
+/**
+ * @function logRequestMiddleware
+ * @param {object} req
+ * @param {object} res
+ * @param {function} next
+ */
+const logRequestMiddleware = function (req, res, next) {
+  setImmediate(() => {
+    const reqInfo = `[${Date.now()}] - ${req.method} - ${req.url}`
+    console.info(reqInfo)
+  })
 
-    <h3> </h3>
+  next()
+}
 
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
+module.exports = {
+  logRequestMiddleware
+}
+</code></pre>
+        </article>
+    </section>
 
 
 

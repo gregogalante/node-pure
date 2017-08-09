@@ -1,9 +1,9 @@
-const logger = require('./config/logger')
 const server = require('./config/server')
+const logRequestMiddleware = require('../index').modules.Logger.logRequestMiddleware
 
 // Middlewares:
 
-server.middleware((req, res, next) => logger.middleware(req, res, next))
+server.use(logRequestMiddleware)
 
 // Routes:
 
