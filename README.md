@@ -5,27 +5,45 @@ Experimental Node server without external dependencies.
 ## Usage
 
 ```javascript
-const Server = require('node-pure').Server
+const Server = require('pure').Server
 
-const server = new Server({
-  port: process.env.PORT || 9000
-}, (err) => {
-  if (err) {
-    console.log(err)
-    return
+const settings = {
+
+  // server port
+  port: process.env.PORT || 9000,
+
+  // server https settings
+  https: false,
+
+  // schema validator for requests
+  schemaValidator: (req) => {
+    return true
   }
+
+}
+
+// Initialize server.
+const server = new Server(settings, (err) => {
   console.log('Server is running')
 })
 
-server.middleware((req, res, next) => {
-  next()
-})
+// Set middlewares.
+server.middleware(null, (req, res, next) => { next() })
+server.middleware('/admin', (req, res, next) => { next() })
 
-server.get('/', (req, res) => {
+// Set GET route.
+server.get('/', null, (req, res) => {
   res.send({ hello: 'world' })
 })
 
-server.post('/', (req, res) => {
+// Set POST route.
+const postSchema = {
+  properties: {
+    example: { type: 'number' }
+  }
+}
+
+server.post('/', postSchema, (req, res) => {
   res.send({ hello: 'world' })
 })
 ```

@@ -9,10 +9,10 @@ server.use(null, jsonParserMiddleware)
 
 // Routes:
 
-server.get('/', (req, res) => {
+server.get('/', null, (req, res) => {
   res.send({ hello: 'world' })
 })
 
-server.post('/', (req, res) => {
+server.post('/', null, (req, res) => {
   res.send({ hello: 'world' })
 })
