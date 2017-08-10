@@ -3,7 +3,7 @@ const logRequestMiddleware = require('../index').modules.Logger.logRequestMiddle
 
 // Middlewares:
 
-server.use(logRequestMiddleware)
+server.use(null, logRequestMiddleware)
 
 // Routes:
 

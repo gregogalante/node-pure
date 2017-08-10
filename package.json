@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "doc": "jsdoc -c ./conf.json",
-    "example": "nodemon ./example/index.js"
+    "example": "nodemon ./example/index.js",
+    "cannon": "autocannon -c 100 -d 5 -p 10 localhost:9000"
   },
   "repository": {
     "type": "git",
