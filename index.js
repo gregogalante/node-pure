@@ -3,6 +3,7 @@ module.exports = {
 
   modules: {
     Logger: require('./lib/modules/Logger'),
-    BodyParser: require('./lib/modules/BodyParser')
+    BodyParser: require('./lib/modules/BodyParser'),
+    ContentType: require('./lib/modules/ContentType')
   }
 }
