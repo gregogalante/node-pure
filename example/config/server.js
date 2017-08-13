@@ -1,9 +1,14 @@
+const path = require('path')
+
 const Server = require('../../index').Server
 
 const settings = {
 
   // server port
   port: process.env.PORT || 9000,
+
+  // server public directory
+  public: path.resolve(__dirname, '../public'),
 
   // server https settings
   https: false,
