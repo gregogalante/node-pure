@@ -19,7 +19,7 @@ const settings = {
   https: false,
 
   // schema validator for requests
-  schemaValidator: (req) => {
+  schemaValidator: (req, schema) => {
     return true
   }
 
